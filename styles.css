@@ -28,3 +28,52 @@ body {
     border-radius: 8px;
     pointer-events: none;
 }
+
+/* Centering the main content */
+.container {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Centering the main content */
+.container-2 {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Centering the SVG element */
+#beeswarm-svg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Centering the control panel */
+#control-panel {
+    text-align: center; /* This centers the inline elements within the control panel */
+}
+
+/* Centering the SVG element */
+#beeswarm-svg-2 {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Centering the control panel */
+#control-panel-2 {
+    text-align: center; /* This centers the inline elements within the control panel */
+}
+
+
+/* Custom CSS for setting the SVG as a fixed background with independent opacity */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../modified_world.svg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+}

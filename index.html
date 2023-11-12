@@ -9,31 +9,52 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
-    <!-- <h1>Homework #4: Global Developments</h1> -->
-    <!-- <h2>Name: Harrison Boettner - Email: hboettne@asu.edu</h2> -->
+    <div class="container">
+        <svg id="beeswarm-svg" width="960" height="600"></svg>
+        <div id="control-panel">
+            <label for="x-attribute-selector">X-axis Attribute:</label>
+            <select id="x-attribute-selector"></select>
 
-    <svg id="beeswarm-svg" width="960" height="600"></svg>
+            <label for="size-attribute-selector">Size Attribute:</label>
+            <select id="size-attribute-selector"></select>
 
-    <div id="control-panel">
-        <label for="x-attribute-selector">X-axis Attribute:</label>
-        <select id="x-attribute-selector"></select>
+            <label for="regions-selector">Regions:</label>
+            <select id="regions-selector"></select>
+            <button id="select-all-regions">Select All</button>
+            <button id="deselect-all-regions">Deselect All</button>
 
-        <label for="size-attribute-selector">Size Attribute:</label>
-        <select id="size-attribute-selector"></select>
+            <label for="year-input">Year:</label>
+            <input type="number" id="year-input" min="1960" max="2013" value="2000">
 
-        <label for="regions-selector">Regions:</label>
-        <select id="regions-selector"></select>
-        <button id="select-all-regions">Select All</button>
-        <button id="deselect-all-regions">Deselect All</button>
-
-        <label for="year-input">Year:</label>
-        <input type="number" id="year-input" min="1960" max="2013" value="2000">
-
-        <input type="range" id="year-range" min="1" max="5" value="1">
-        <button id="play-pause-button">Play</button>
+            <input type="range" id="year-range" min="1" max="5" value="1">
+            <button id="play-pause-button">Play</button>
+        </div>
     </div>
 
+    <div class="container-2">
+        <svg id="beeswarm-svg-2" width="960" height="600"></svg>
+        <div id="control-panel-2">
+            <label for="x-attribute-selector-2">X-axis Attribute:</label>
+            <select id="x-attribute-selector-2"></select>
+
+            <label for="size-attribute-selector-2">Size Attribute:</label>
+            <select id="size-attribute-selector-2"></select>
+
+            <label for="regions-selector-2">Regions:</label>
+            <select id="regions-selector-2"></select>
+            <button id="select-all-regions-2">Select All</button>
+            <button id="deselect-all-regions-2">Deselect All</button>
+
+            <label for="year-input-2">Year:</label>
+            <input type="number" id="year-input-2" min="1960" max="2013" value="2000">
+
+            <input type="range" id="year-range-2" min="1" max="5" value="1">
+            <button id="play-pause-button-2">Play</button>
+        </div>
+    </div>
+    
     <script src="swarm.js"></script>
+    <script src="swarm2.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
