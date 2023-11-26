@@ -17,7 +17,7 @@ let selectedAttributes = [
   'Data.Infrastructure.Mobile Cellular Subscriptions per 100 People'
 ];
 let selectedRegions = [];
-let selectedXAttribute = 'Data.Health.Life Expectancy at Birth, Total';
+let selectedXAttribute = 'Data.Infrastructure.Mobile Cellular Subscriptions';
 let selectedSizeAttribute = 'Data.Health.Total Population';
 let selectedYear = 2000;
 let isPlaying = false;
@@ -37,7 +37,7 @@ const tooltip = d3.select("body").append("div")
 let xScale, sizeScale;
 
 function initializeControls() {
-    const attributeSelectors = [d3.select("#x-attribute-selector"), d3.select("#size-attribute-selector")];
+    const attributeSelectors = [d3.select("#size-attribute-selector")]; // d3.select("#x-attribute-selector"),
     attributeSelectors.forEach(selector => {
         selector.selectAll("option")
             .data(selectedAttributes)
@@ -50,10 +50,10 @@ function initializeControls() {
     selectedXAttribute = selectedXAttribute || selectedAttributes[0];
     selectedSizeAttribute = selectedSizeAttribute || selectedAttributes[1];
 
-    d3.select("#x-attribute-selector").on("change", function() {
-        selectedXAttribute = d3.select(this).property("value");
-        updateChart();
-    });
+    // d3.select("#x-attribute-selector").on("change", function() {
+    //     selectedXAttribute = d3.select(this).property("value");
+    //     updateChart();
+    // });
 
     d3.select("#size-attribute-selector").on("change", function() {
         selectedSizeAttribute = d3.select(this).property("value");
@@ -97,13 +97,13 @@ function showTooltip(event, d) {
         .duration(200)
         .style("opacity", .9);
     tooltip.html(`Country: ${event.Country}<br/>${selectedXAttribute}: ${event[selectedXAttribute]}<br/>${selectedSizeAttribute}: ${event[selectedSizeAttribute]}`)
-        .style("left", (event.pageX) + "px")
-        .style("top", (event.pageY - 28) + "px");
+        .style("left", (d3.event.pageX + 10) + "px")  // Adjust X position
+        .style("top", (d3.event.pageY - 15) + "px"); // Adjust Y position
 }
 
 function moveTooltip(event) {
-    tooltip.style("left", (event.pageX) + "px")
-          .style("top", (event.pageY - 28) + "px");
+    tooltip.style("left", (d3.event.pageX + 10) + "px")  // Adjust X position
+          .style("top", (d3.event.pageY - 15) + "px"); // Adjust Y position
 }
 
 function hideTooltip() {
@@ -124,17 +124,17 @@ function drawBeeswarm(data) {
 
     circles.enter().append("circle")
         .attr("r", d => sizeScale(d[selectedSizeAttribute]) / 2)
-        .style("fill", "magenta")
+        .style("fill", "red")
         .on("mouseover", showTooltip)
         .on("mousemove", moveTooltip)
         .on("mouseout", hideTooltip)
         .merge(circles)
         .attr("r", d => sizeScale(d[selectedSizeAttribute]) / 2)
-        .style("fill", "magenta");
+        .style("fill", "red");
 
     circles
         .attr("r", d => sizeScale(d[selectedSizeAttribute]) / 2)
-        .style("fill", "magenta");
+        .style("fill", "red");
 
     circles.exit().remove();
 

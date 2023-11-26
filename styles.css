@@ -18,6 +18,10 @@ body {
     margin-right: 10px;
 }
 
+.description {
+    text-align: center;
+}
+
 .tooltip {
     position: absolute;
     text-align: center;
@@ -31,14 +35,14 @@ body {
 
 /* Centering the main content */
 .container {
-    width: 80%; /* Adjust the width as needed */
-    margin: 0 auto; /* Centers the container */
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* Centering the main content */
 .container-2 {
-    width: 80%; /* Adjust the width as needed */
-    margin: 0 auto; /* Centers the container */
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* Centering the SVG element */
@@ -49,7 +53,7 @@ body {
 
 /* Centering the control panel */
 #control-panel {
-    text-align: center; /* This centers the inline elements within the control panel */
+    text-align: center;
 }
 
 /* Centering the SVG element */
@@ -58,13 +62,11 @@ body {
     margin: 0 auto;
 }
 
-/* Centering the control panel */
 #control-panel-2 {
-    text-align: center; /* This centers the inline elements within the control panel */
+    text-align: center;
 }
 
 
-/* Custom CSS for setting the SVG as a fixed background with independent opacity */
 body::before {
     content: '';
     position: fixed;
@@ -76,4 +78,19 @@ body::before {
     background-size: cover;
     opacity: 0.1;
     z-index: -1;
+}
+
+#main-container {
+    width: 100%;
+    text-align: center;
+}
+
+#chart-container-1, #chart-container-2, #chart-container-3 {
+    width: 30%;
+    display: inline-block;
+}
+
+.bar-svg {
+    width: 100%;
+    height: 400px;
 }
