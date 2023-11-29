@@ -94,3 +94,23 @@ body::before {
     width: 100%;
     height: 400px;
 }
+
+#linechart-container {
+    width: 100%;
+    text-align: center;
+}
+
+#linechart-container-1, #linechart-container-2, #linechart-container-3 {
+    width: 30%;
+    display: inline-block;
+}
+
+#piechart-container {
+    width: 100%;
+    text-align: center;
+}
+
+#piechart-container-1, #piechart-container-2, #piechart-container-3 {
+    width: 30%;
+    display: inline-block;
+}
