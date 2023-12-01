@@ -114,3 +114,14 @@ body::before {
     width: 30%;
     display: inline-block;
 }
+
+
+#areachart-container {
+    width: 100%;
+    text-align: center;
+}
+
+#areachart-container-1, #areachart-container-2, #areachart-container-3 {
+    width: 30%;
+    display: inline-block;
+}
