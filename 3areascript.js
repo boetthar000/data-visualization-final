@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             svg.append("g")
                 .call(d3.axisLeft(y).tickFormat(d3.format("~s")));
     
-            // Legend (similar to previous examples)
+            // Legend
             const legend = svg.append("g")
                 .attr("class", "legend")
                 .attr("transform", `translate(${width - 100},${margin.top})`);

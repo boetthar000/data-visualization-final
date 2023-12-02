@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 .style("text-anchor", "middle")
                 .text(d => d.data.year);
     
-            // Legend (similar to previous examples)
+            // Legend
             const legend = svg.append("g")
                 .attr("class", "legend")
                 .attr("transform", `translate(${width - 100},${margin.top})`);
