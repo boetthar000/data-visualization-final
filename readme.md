@@ -1,6 +1,8 @@
 #formatting is clean on the drive, screenshots are also visible on the drive
 drive link: https://docs.google.com/document/d/1Z3oiNew77J1pgke8mD_-wWTOsgzZlk1hlRRqAJo8b7U/edit?usp=sharing
 
+Or refer to the Final Write Up.pdf in the codebase and download for a nice display
+
 
 
 Title + names of group members
