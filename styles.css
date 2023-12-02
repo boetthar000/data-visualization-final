@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
 }
@@ -33,39 +32,19 @@ body {
     pointer-events: none;
 }
 
-/* Centering the main content */
-.container {
+.container, .container-2 {
     width: 80%;
     margin: 0 auto;
 }
 
-/* Centering the main content */
-.container-2 {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Centering the SVG element */
-#beeswarm-svg {
+#beeswarm-svg, #beeswarm-svg-2 {
     display: block;
     margin: 0 auto;
 }
 
-/* Centering the control panel */
-#control-panel {
+#control-panel, #control-panel-2 {
     text-align: center;
 }
-
-/* Centering the SVG element */
-#beeswarm-svg-2 {
-    display: block;
-    margin: 0 auto;
-}
-
-#control-panel-2 {
-    text-align: center;
-}
-
 
 body::before {
     content: '';
@@ -80,12 +59,15 @@ body::before {
     z-index: -1;
 }
 
-#main-container {
+#main-container, #linechart-container, #piechart-container, #areachart-container {
     width: 100%;
     text-align: center;
 }
 
-#chart-container-1, #chart-container-2, #chart-container-3 {
+#chart-container-1, #chart-container-2, #chart-container-3,
+#linechart-container-1, #linechart-container-2, #linechart-container-3,
+#piechart-container-1, #piechart-container-2, #piechart-container-3,
+#areachart-container-1, #areachart-container-2, #areachart-container-3 {
     width: 30%;
     display: inline-block;
 }
@@ -95,33 +77,10 @@ body::before {
     height: 400px;
 }
 
-#linechart-container {
-    width: 100%;
+.chart-comment {
+    font-size: 16px; 
+    color: #333;
     text-align: center;
-}
-
-#linechart-container-1, #linechart-container-2, #linechart-container-3 {
-    width: 30%;
-    display: inline-block;
-}
-
-#piechart-container {
-    width: 100%;
-    text-align: center;
-}
-
-#piechart-container-1, #piechart-container-2, #piechart-container-3 {
-    width: 30%;
-    display: inline-block;
-}
-
-
-#areachart-container {
-    width: 100%;
-    text-align: center;
-}
-
-#areachart-container-1, #areachart-container-2, #areachart-container-3 {
-    width: 30%;
-    display: inline-block;
+    margin-bottom: 10px;
+    font-style: italic;
 }

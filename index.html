@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,51 +15,55 @@
         <h2>Shiling Dai, sdai17@asu.edu</h2>
         <h3>Overview:</h3>
     </div>
+
     <div class="container">
+        <p class="chart-comment">This chart shows the relationship between the amount of mobile cellular subscriptions and birth, death, fertility, life expectancy, and population rates of the different countries throughout the years.</p>
         <svg id="beeswarm-svg" width="960" height="600"></svg>
         <div id="control-panel">
             <label for="x-attribute-selector">X-axis Attribute:</label>
             <h3 id="x-attribute-selector">Data.Infrastructure.Mobile Cellular Subscriptions</h3>
-
+    
             <label for="size-attribute-selector">Size Attribute:</label>
             <select id="size-attribute-selector"></select>
-
+    
             <!-- <label for="regions-selector">Regions:</label> -->
             <select id="regions-selector"></select>
             <button id="select-all-regions">Select All</button>
             <button id="deselect-all-regions">Deselect All</button>
-
+    
             <label for="year-input">Year:</label>
             <input type="number" id="year-input" min="1960" max="2013" value="2000">
-
+    
             <input type="range" id="year-range" min="1" max="5" value="1">
             <button id="play-pause-button">Play</button>
         </div>
     </div>
-
+    
     <div class="container-2">
+        <p class="chart-comment">This chart shows mobile cellular subscriptions per 100 People in each country in relation to birth, death, fertility, life expectancy, and population rates of the different countries throughout the years.</p>
         <svg id="beeswarm-svg-2" width="960" height="600"></svg>
         <div id="control-panel-2">
             <label for="x-attribute-selector-2">X-axis Attribute:</label>
             <h3 id="x-attribute-selector-2">Data.Infrastructure.Mobile Cellular Subscriptions per 100 People</h3>
-
+    
             <label for="size-attribute-selector-2">Size Attribute:</label>
             <select id="size-attribute-selector-2"></select>
-
+    
             <!-- <label for="regions-selector-2">Regions:</label> -->
             <select id="regions-selector-2"></select>
             <button id="select-all-regions-2">Select All</button>
             <button id="deselect-all-regions-2">Deselect All</button>
-
+    
             <!-- <label for="year-input-2">Year:</label>
             <input type="number" id="year-input-2" min="1960" max="2013" value="2000">
-
+    
             <input type="range" id="year-range-2" min="1" max="5" value="1">
             <button id="play-pause-button-2">Play</button> -->
         </div>
-    </div>
+    </div>    
 
     <div id="main-container">
+        <p class="chart-comment">These charts show the mobile cellular subscriptions in certain countries over the course of 4 years.</p>
         <div id="chart-container-1">
             <svg class="bar-svg" id="chart1"></svg>
         </div>
@@ -73,6 +76,7 @@
     </div>
 
     <div id="linechart-container">
+        <p class="chart-comment">These charts show the mobile cellular subscriptions in certain countries over the course of 4 years.</p>
         <div id="linechart-container-1">
             <svg class="bar-svg" id="line1"></svg>
         </div>
@@ -85,6 +89,7 @@
     </div>
 
     <div id="piechart-container">
+        <p class="chart-comment">These charts show the mobile cellular subscriptions in certain countries over the course of 4 years.</p>
         <div id="piechart-container-1">
             <svg class="bar-svg" id="pie1"></svg>
         </div>
@@ -97,6 +102,7 @@
     </div>
 
     <div id="areachart-container">
+        <p class="chart-comment">These charts show the mobile cellular subscriptions in certain countries over the course of 4 years.</p>
         <div id="areachart-container-1">
             <svg class="bar-svg" id="area1"></svg>
         </div>
@@ -107,13 +113,12 @@
             <svg class="bar-svg" id="area3"></svg>
         </div>
     </div>
-    
+
     <script src="swarm.js"></script>
     <script src="swarm2.js"></script>
     <script src="3barscript.js"></script>
     <script src="3linescript.js"></script>
     <script src="3piescript.js"></script>
     <script src="3areascript.js"></script>
-    
 </body>
 </html>
