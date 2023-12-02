@@ -86,9 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
   
-    createAreaChart("#area1", "United States", "Philippines", {yText: "Mobile Cellular Subscriptions", color1: "blue", color2: "grey", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
-    createAreaChart("#area2", "China", "Kenya", {yText: "Mobile Cellular Subscriptions", color1: "red", color2: "black", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
-    createAreaChart("#area3", "Canada", "Argentina", {yText: "Mobile Cellular Subscriptions", color1: "purple", color2: "orange", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
+    createAreaChart("#area1", "Angola", "Afghanistan", {yText: "Mobile Cellular Subscriptions", color1: "blue", color2: "grey", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
+    createAreaChart("#area2", "Argentina", "Bangladesh", {yText: "Mobile Cellular Subscriptions", color1: "red", color2: "black", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
+    createAreaChart("#area3", "Bolivia", "Burkina Faso", {yText: "Mobile Cellular Subscriptions", color1: "purple", color2: "orange", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
   
     function processDataForChart(rawData, country1, country2, attribute) {
         let processedData = {};

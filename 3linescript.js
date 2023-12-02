@@ -90,9 +90,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
 
-    createLineChart("#line1", "United States", "Philippines","China", "Kenya", "Canada", "Argentina" ,{ yText: "Mobile Cellular Subscriptions", color1: "blue", color2: "grey", color3: "red", color4: "purple",color5: "orange", color6: "green",attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions' });
-    createLineChart("#line2", "China", "Kenya",  "United States", "Philippines","Canada", "Argentina" ,{ yText: "Mobile Cellular Subscriptions", color1: "blue", color2: "grey", color3: "red", color4: "purple",color5: "orange", color6: "green", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions' });
-    createLineChart("#line3", "China", "Kenya",  "United States", "Philippines","Canada", "Argentina", { yText: "Mobile Cellular Subscriptions", color1: "blue", color2: "grey", color3: "red", color4: "purple",color5: "orange", color6: "green", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions' });
+    createLineChart("#line1", "United States", "Mexico", "Canada", "Guatemala", "Cuba", "Dominican Republic" ,{ yText: "Mobile Cellular Subscriptions", color1: "blue", color2: "grey", color3: "red", color4: "purple",color5: "orange", color6: "green",attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions' });
+    createLineChart("#line2", "Italy", "France",  "United Kingdom", "Germany","Poland", "Netherlands" ,{ yText: "Mobile Cellular Subscriptions", color1: "blue", color2: "grey", color3: "red", color4: "purple",color5: "orange", color6: "green", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions' });
+    createLineChart("#line3", "China", "Japan",  "India", "Vietnam","Philippines", "Singapore", { yText: "Mobile Cellular Subscriptions", color1: "blue", color2: "grey", color3: "red", color4: "purple",color5: "orange", color6: "green", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions' });
 
     function processDataForChart(rawData, country1, country2, country3, country4, country5, country6, attribute) {
         let processedData = {};

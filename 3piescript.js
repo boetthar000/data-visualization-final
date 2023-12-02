@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const width = 600 - margin.left - margin.right;
     const height = 400 - margin.top - margin.bottom;
   
-    function createDonutChart(svgId, country1, country2, options) {
+    function createDonutChart(svgId, country1, options) {
         const svg = d3.select(svgId)
             .attr("width", width)
             .attr("height", height)
@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
             .attr("transform", `translate(${width / 2},${height / 2})`);
     
         d3.csv("./data/filtered_global_development.csv").then(function (rawData) {
-            const data = processDataForChart(rawData, country1, country2, options.attribute);
+            const data = processDataForChart(rawData, country1, options.attribute);
     
             const pie = d3.pie()
                 .sort(null)
-                .value(d => d[country1]);
+                .value(d => d[country1])
     
             const arc = d3.arc()
                 .innerRadius(50)  // Adjust the inner radius for the donut hole
@@ -48,8 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 .attr("transform", `translate(${width - 100},${margin.top})`);
     
             const countries = [
-                { name: country1, color: options.color1 },
-                { name: country2, color: options.color2 }
+                { name: country1, color: options.color1 }
             ];
     
             countries.forEach((country, index) => {
@@ -73,25 +72,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
   
-    createDonutChart("#pie1", "United States", "Philippines", {yText: "Mobile Cellular Subscriptions", color1: "blue", color2: "grey", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
-    createDonutChart("#pie2", "China", "Kenya", {yText: "Mobile Cellular Subscriptions", color1: "red", color2: "black", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
-    createDonutChart("#pie3", "Canada", "Argentina", {yText: "Mobile Cellular Subscriptions", color1: "purple", color2: "orange", attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
+    createDonutChart("#pie1", "United States", {yText: "Mobile Cellular Subscriptions", color1: "blue",  attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
+    createDonutChart("#pie2", "China", {yText: "Mobile Cellular Subscriptions", color1: "red",  attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
+    createDonutChart("#pie3", "India",  {yText: "Mobile Cellular Subscriptions", color1: "purple",  attribute: 'Data.Infrastructure.Mobile Cellular Subscriptions'});
     
-    function processDataForChart(rawData, country1, country2, attribute) {
+    function processDataForChart(rawData, country1, attribute) {
         let processedData = {};
     
         rawData.forEach(d => {
             const year = parseInt(d.Year, 10);
-            if ((year >= 2008 && year <= 2013) && (d.Country === country1 || d.Country === country2)) {
+            if ((year >= 2008 && year <= 2013) && (d.Country === country1 )) {
                 if (!processedData[year]) {
                     processedData[year] = { year: year };
                 }
     
                 if (d.Country === country1) {
                     processedData[year][country1] = +d[attribute];
-                } else if (d.Country === country2) {
-                    processedData[year][country2] = +d[attribute];
-                }
+                } 
             }
         });
     
